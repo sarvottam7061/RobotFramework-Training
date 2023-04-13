@@ -10,7 +10,7 @@ ${Login Link}     xpath://a[text()='Log in']
 ${URL}  https://demowebshop.tricentis.com/
 ${Browser}  Chrome
 ${Exec Path}  ../../Drivers/chromedriver.exe
-${Email id}  michaeljackson13@test.com
+${Email id}  michaeljackson14@test.com
 ${Valid Password}  demo@testing
 ${Invalid Password}  demo#test
 ${Login Id}  michaeljackson5@test.com
