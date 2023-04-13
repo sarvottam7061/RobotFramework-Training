@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.6 on win32)" generated="20230413 02:15:21.615" rpa="false" schemaversion="3">
+<suite id="s1" name="ArgumentDemoTest" source="C:\Users\sarvo\PycharmProjects\RobotFrameworkDemo2\TestCases\WebTestCases\ArgumentDemoTest.robot">
+<test id="s1-t1" name="Validate Successful Registration" line="16">
+<kw name="Open the browser and navigate to webshop url" library="Resourse" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230413 02:15:21.993" endtime="20230413 02:15:21.993"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>executable_path=${Exec Path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230413 02:15:21.993" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" starttime="20230413 02:15:21.993" endtime="20230413 02:15:37.987"/>
+</kw>
+<status status="PASS" starttime="20230413 02:15:21.993" endtime="20230413 02:15:37.987"/>
+</kw>
+<kw name="Click on register to open the registration link" library="Resourse">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${Register Link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:37.990" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20230413 02:15:37.989" endtime="20230413 02:15:40.122"/>
+</kw>
+<status status="PASS" starttime="20230413 02:15:37.988" endtime="20230413 02:15:40.122"/>
+</kw>
+<kw name="Select the gender either amle or female" library="Resourse">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230413 02:15:40.124" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20230413 02:15:40.123" endtime="20230413 02:15:41.744"/>
+</kw>
+<status status="PASS" starttime="20230413 02:15:40.123" endtime="20230413 02:15:41.744"/>
+</kw>
+<kw name="Enter your firstname, lastname, emailid in textbox" library="Resourse">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:FirstName</arg>
+<arg>Michael</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:41.746" level="INFO">Typing text 'Michael' into text field 'id:FirstName'.</msg>
+<status status="PASS" starttime="20230413 02:15:41.745" endtime="20230413 02:15:43.422"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:LastName</arg>
+<arg>Jackson</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:43.422" level="INFO">Typing text 'Jackson' into text field 'id:LastName'.</msg>
+<status status="PASS" starttime="20230413 02:15:43.422" endtime="20230413 02:15:45.065"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${Email id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:45.065" level="INFO">Typing text 'michaeljackson13@test.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230413 02:15:45.065" endtime="20230413 02:15:46.781"/>
+</kw>
+<status status="PASS" starttime="20230413 02:15:41.745" endtime="20230413 02:15:46.781"/>
+</kw>
+<kw name="Enter your password and confirm password">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${Valid Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:46.781" level="INFO">Typing password into text field 'id:Password'.</msg>
+<msg timestamp="20230413 02:15:47.851" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230413 02:15:48.446" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230413 02:15:46.781" endtime="20230413 02:15:48.446"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:ConfirmPassword</arg>
+<arg>${Valid Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:48.446" level="INFO">Typing password into text field 'id:ConfirmPassword'.</msg>
+<msg timestamp="20230413 02:15:49.512" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230413 02:15:50.126" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230413 02:15:48.446" endtime="20230413 02:15:50.127"/>
+</kw>
+<status status="PASS" starttime="20230413 02:15:46.781" endtime="20230413 02:15:50.128"/>
+</kw>
+<kw name="Now Click on register button to submit the form" library="Resourse">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:register-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:50.130" level="INFO">Clicking button 'id:register-button'.</msg>
+<status status="PASS" starttime="20230413 02:15:50.129" endtime="20230413 02:15:53.490"/>
+</kw>
+<status status="PASS" starttime="20230413 02:15:50.128" endtime="20230413 02:15:53.490"/>
+</kw>
+<kw name="This will wait for successful registration and close the browser" library="Resourse">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@class='page registration-result-page']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230413 02:15:53.492" endtime="20230413 02:15:54.815"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@class='button-1 register-continue-button' ]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230413 02:15:54.815" level="INFO">Clicking button 'xpath://input[@class='button-1 register-continue-button' ]'.</msg>
+<status status="PASS" starttime="20230413 02:15:54.815" endtime="20230413 02:15:57.994"/>
+</kw>
+<status status="PASS" starttime="20230413 02:15:53.491" endtime="20230413 02:15:57.994"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230413 02:15:57.995" endtime="20230413 02:16:01.607"/>
+</kw>
+<doc>This Test is to Validate Successful Registration of the Webshop Portal</doc>
+<tag>sanity</tag>
+<status status="PASS" starttime="20230413 02:15:21.993" endtime="20230413 02:16:01.607"/>
+</test>
+<test id="s1-t2" name="Validate Successful Login" line="26">
+<kw name="Open the browser and navigate to webshop url" library="Resourse" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230413 02:16:01.607" endtime="20230413 02:16:01.607"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>executable_path=${Exec Path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230413 02:16:01.607" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" starttime="20230413 02:16:01.607" endtime="20230413 02:16:09.386"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:01.607" endtime="20230413 02:16:09.386"/>
+</kw>
+<kw name="Click on login to open the login link" library="Resourse">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${Login Link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:09.386" level="INFO">Clicking link 'xpath://a[text()='Log in']'.</msg>
+<status status="PASS" starttime="20230413 02:16:09.386" endtime="20230413 02:16:11.461"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:09.386" endtime="20230413 02:16:11.461"/>
+</kw>
+<kw name="Enter your emailid and password in textbox">
+<arg>${Login Id}</arg>
+<arg>${Valid Password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:11.461" level="INFO">Typing text 'michaeljackson5@test.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230413 02:16:11.461" endtime="20230413 02:16:13.125"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:13.126" level="INFO">Typing password into text field 'id:Password'.</msg>
+<msg timestamp="20230413 02:16:14.242" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230413 02:16:14.836" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230413 02:16:13.125" endtime="20230413 02:16:14.836"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:11.461" endtime="20230413 02:16:14.836"/>
+</kw>
+<kw name="Now click on LogIn button to login" library="Resourse">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@class='button-1 login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:14.839" level="INFO">Clicking button 'xpath://input[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20230413 02:16:14.838" endtime="20230413 02:16:17.257"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:14.837" endtime="20230413 02:16:17.257"/>
+</kw>
+<kw name="This will wait for successful login and close the browser">
+<arg>${Success Login Message}</arg>
+<arg>${Pass expected}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230413 02:16:17.259" endtime="20230413 02:16:18.305"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${Login message}</arg>
+<arg>${expected}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230413 02:16:18.305" level="INFO">Verifying element 'xpath://div[@class='topic-html-content-title']' contains exact text 'Welcome to our store'.</msg>
+<status status="PASS" starttime="20230413 02:16:18.305" endtime="20230413 02:16:19.383"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:17.258" endtime="20230413 02:16:19.383"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230413 02:16:19.384" endtime="20230413 02:16:22.073"/>
+</kw>
+<doc>This Test is to Validate Successful Login of the Webshop Portal</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20230413 02:16:01.607" endtime="20230413 02:16:22.073"/>
+</test>
+<test id="s1-t3" name="Failed Invalid Login" line="33">
+<kw name="Open the browser and navigate to webshop url" library="Resourse" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230413 02:16:22.073" endtime="20230413 02:16:22.073"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>executable_path=${Exec Path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230413 02:16:22.073" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" starttime="20230413 02:16:22.073" endtime="20230413 02:16:29.565"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:22.073" endtime="20230413 02:16:29.565"/>
+</kw>
+<kw name="Click on login to open the login link" library="Resourse">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${Login Link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:29.566" level="INFO">Clicking link 'xpath://a[text()='Log in']'.</msg>
+<status status="PASS" starttime="20230413 02:16:29.566" endtime="20230413 02:16:31.659"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:29.566" endtime="20230413 02:16:31.659"/>
+</kw>
+<kw name="Enter your emailid and password in textbox">
+<arg>${Login Id}</arg>
+<arg>${Invalid Password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:31.659" level="INFO">Typing text 'michaeljackson5@test.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230413 02:16:31.659" endtime="20230413 02:16:33.388"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:33.388" level="INFO">Typing password into text field 'id:Password'.</msg>
+<msg timestamp="20230413 02:16:34.465" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230413 02:16:35.071" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230413 02:16:33.388" endtime="20230413 02:16:35.071"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:31.659" endtime="20230413 02:16:35.071"/>
+</kw>
+<kw name="Now click on LogIn button to login" library="Resourse">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@class='button-1 login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:35.072" level="INFO">Clicking button 'xpath://input[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20230413 02:16:35.072" endtime="20230413 02:16:37.301"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:35.072" endtime="20230413 02:16:37.301"/>
+</kw>
+<kw name="This will wait for successful login and close the browser">
+<arg>${Error Login Message}</arg>
+<msg timestamp="20230413 02:16:37.301" level="FAIL">Keyword 'This will wait for successful login and close the browser' expected 2 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230413 02:16:37.301" endtime="20230413 02:16:37.301"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230413 02:16:37.301" endtime="20230413 02:16:40.339"/>
+</kw>
+<doc>This Test is to Validate Successful Login of the Webshop Portal</doc>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20230413 02:16:22.073" endtime="20230413 02:16:40.339">Keyword 'This will wait for successful login and close the browser' expected 2 arguments, got 1.</status>
+</test>
+<test id="s1-t4" name="Validate Invalid Login" line="40">
+<kw name="Open the browser and navigate to webshop url" library="Resourse" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230413 02:16:40.339" endtime="20230413 02:16:40.339"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>executable_path=${Exec Path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230413 02:16:40.339" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" starttime="20230413 02:16:40.339" endtime="20230413 02:16:48.695"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:40.339" endtime="20230413 02:16:48.695"/>
+</kw>
+<kw name="Click on login to open the login link" library="Resourse">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${Login Link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:48.697" level="INFO">Clicking link 'xpath://a[text()='Log in']'.</msg>
+<status status="PASS" starttime="20230413 02:16:48.697" endtime="20230413 02:16:50.808"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:48.696" endtime="20230413 02:16:50.808"/>
+</kw>
+<kw name="Enter your emailid and password in textbox">
+<arg>${Login Id}</arg>
+<arg>${Invalid Password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:50.811" level="INFO">Typing text 'michaeljackson5@test.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230413 02:16:50.810" endtime="20230413 02:16:52.489"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:52.490" level="INFO">Typing password into text field 'id:Password'.</msg>
+<msg timestamp="20230413 02:16:53.563" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230413 02:16:54.154" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230413 02:16:52.490" endtime="20230413 02:16:54.154"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:50.809" endtime="20230413 02:16:54.154"/>
+</kw>
+<kw name="Now click on LogIn button to login" library="Resourse">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@class='button-1 login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230413 02:16:54.155" level="INFO">Clicking button 'xpath://input[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20230413 02:16:54.155" endtime="20230413 02:16:56.298"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:54.155" endtime="20230413 02:16:56.298"/>
+</kw>
+<kw name="This will wait for successful login and close the browser">
+<arg>${Error Login Message}</arg>
+<arg>${Fail expected}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230413 02:16:56.300" endtime="20230413 02:16:57.349"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${Login message}</arg>
+<arg>${expected}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230413 02:16:57.349" level="INFO">Verifying element 'xpath://span[text()='Login was unsuccessful. Please correct the errors and try again.']' contains exact text 'Login was unsuccessful. Please correct the errors and try again.'.</msg>
+<status status="PASS" starttime="20230413 02:16:57.349" endtime="20230413 02:16:58.396"/>
+</kw>
+<status status="PASS" starttime="20230413 02:16:56.299" endtime="20230413 02:16:58.397"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230413 02:16:58.398" endtime="20230413 02:17:01.054"/>
+</kw>
+<doc>This Test is to Validate Successful Login of the Webshop Portal</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20230413 02:16:40.339" endtime="20230413 02:17:01.054"/>
+</test>
+<doc>To validate Scenarios of the WebShop Shoppping Portal</doc>
+<status status="FAIL" starttime="20230413 02:15:21.618" endtime="20230413 02:17:01.054"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">sanity</stat>
+<stat pass="2" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="ArgumentDemoTest">ArgumentDemoTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
