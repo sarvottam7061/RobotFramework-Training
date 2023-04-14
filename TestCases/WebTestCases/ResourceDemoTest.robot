@@ -2,6 +2,7 @@
 Documentation    To validate Scenarios of the WebShop Shoppping Portal
 Library    SeleniumLibrary
 Resource      ../../TestCases/Resources/Resourse.robot
+
 Test Setup    Open the browser and navigate to webshop url
 Test Teardown        Close Browser
 
@@ -11,8 +12,6 @@ ${Success Login Message}  xpath://div[@class='topic-html-content-title']
 ${Valid Password}  demo@testing
 ${Invalid Password}  demo#test
 ${Login Id}  michaeljackson5@test.com
-
-
 *** Test Cases ***
 Validate Successful Registration
     [Tags]    sanity

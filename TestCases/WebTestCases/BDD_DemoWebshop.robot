@@ -16,7 +16,7 @@ Validate Successful Registration
     [Documentation]    This Test is to Validate Successful Registration of the Webshop Portal
     Open the browser and navigate to webshop url
     Click on register to open the registration link
-    Select the gender either amle or female
+    Select the gender either male or female
     Enter your firstname, lastname, emailid in textbox
     Enter your password and confirm password
     Now Click on register button to submit the form
@@ -37,7 +37,7 @@ Open the browser and navigate to webshop url
     Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
 Click on register to open the registration link
     Click Link  ${Register Link}
-Select the gender either amle or female
+Select the gender either male or female
     Select Radio Button  Gender  M
 Enter your firstname, lastname, emailid in textbox
     Input Text     id:FirstName  Michael

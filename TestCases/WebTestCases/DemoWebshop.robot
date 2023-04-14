@@ -11,12 +11,14 @@ ${Exec Path}  ../../Drivers/chromedriver.exe
 Validate Successful Registration
     [Documentation]    This Test is to Validate Successful Registration of the Webshop Portal
 #    Set Selenium Speed    0.5 seconds
+    [Tags]    firsttest
     Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
+    Maximize Browser Window
     Click Link  xpath://a[text()='Register']
     Select Radio Button  Gender  M
-    Input Text     id:FirstName  Michael
+    Input Text     FirstName  Michael
     Input Text     id:LastName  Jackson
-    Input Text     id:Email  michaeljackson6@test.com
+    Input Text     id:Email  michaeljackson99@test.com
     Input Password  id:Password  demo@testing
     Input Password  id:ConfirmPassword  demo@testing
     Click Button    id:register-button
