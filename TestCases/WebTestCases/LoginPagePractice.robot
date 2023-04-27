@@ -9,11 +9,11 @@ Resource    ../../TestCases/Resources/LoginPage.robot
 
 *** Test Cases ***
 Select the Form and navigate to Child window
-    [Tags]    ui_control
+#    [Tags]    SMOKE
     Fill the Login Details and Login Form
 
 Validate Child window Functionality
-    [Tags]      NEWFEATURE
+#    [Tags]      REGRESSION
     Select the link of Child window
     Verify the user is Switched to Child window
     Grab the Email id in the Child Window

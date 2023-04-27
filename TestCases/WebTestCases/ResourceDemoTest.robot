@@ -14,7 +14,7 @@ ${Invalid Password}  demo#test
 ${Login Id}  michaeljackson5@test.com
 *** Test Cases ***
 Validate Successful Registration
-    [Tags]    sanity
+#    [Tags]    REGRESSION
     [Documentation]    This Test is to Validate Successful Registration of the Webshop Portal
     Click on register to open the registration link
     Select the gender either amle or female
@@ -25,14 +25,14 @@ Validate Successful Registration
 
 Validate Successful Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+#    [Tags]   REGRESSION
     Click on login to open the login link
     Enter your emailid and valid password in textbox
     Now click on LogIn button to login
     This will wait for successful login and close the browser
 Validate Invalid Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+#    [Tags]   SMOKE
     Click on login to open the login link
     Enter your emailid and invalid password in textbox
     Now click on LogIn button to login

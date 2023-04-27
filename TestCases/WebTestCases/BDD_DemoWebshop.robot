@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    To validate Scenarios of the WebShop Shoppping Portal
 Library    SeleniumLibrary
-#Resource
+Resource    ../../TestCases/Resources/Resourse.robot
 
 *** Variables ***
 ${URL}  https://demowebshop.tricentis.com/
@@ -14,6 +14,7 @@ ${Success Login Message}  xpath://div[@class='topic-html-content-title']
 *** Test Cases ***
 Validate Successful Registration
     [Documentation]    This Test is to Validate Successful Registration of the Webshop Portal
+    [Tags]    SMOKE
     Open the browser and navigate to webshop url
     Click on register to open the registration link
     Select the gender either male or female
@@ -24,7 +25,7 @@ Validate Successful Registration
 
 Validate Successful Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+    [Tags]   REGRESSION
     Open the browser and navigate to webshop url
     Click on register to open the login link
     Enter your emailid and password in textbox
@@ -32,9 +33,9 @@ Validate Successful Login
     This will wait for successful login and close the browser
 
 *** Keywords ***
-Open the browser and navigate to webshop url
-    Set Selenium Speed    0.5 seconds
-    Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
+#Open the browser and navigate to webshop url
+#    Set Selenium Speed    0.5 seconds
+#    Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
 Click on register to open the registration link
     Click Link  ${Register Link}
 Select the gender either male or female
@@ -42,7 +43,7 @@ Select the gender either male or female
 Enter your firstname, lastname, emailid in textbox
     Input Text     id:FirstName  Michael
     Input Text     id:LastName  Jackson
-    Input Text     id:Email  michaeljackson8@test.com
+    Input Text     id:Email  michaeljackson749@test.com
 Enter your password and confirm password
     Input Password  id:Password  demo@testing
     Input Password  id:ConfirmPassword  demo@testing
@@ -51,7 +52,7 @@ Now Click on register button to submit the form
 This will wait for successful registration and close the browser
     Wait Until Element Is Visible    //div[@class='page registration-result-page']
     Click Button    xpath://input[@class='button-1 register-continue-button' ]
-    Sleep    3 seconds
+#    Sleep    3 seconds
     Close Browser
 Click on register to open the login link
     Click Link  xpath://a[text()='Log in']

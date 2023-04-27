@@ -19,10 +19,11 @@ ${default_pass}    demo@test
 Login with user ${username} and password ${password}     ${default_user}    ${default_pass}
 
 
+
 *** Keywords ***
 Validate Invalid Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+    [Tags]    REGRESSION
     [Arguments]    ${username}    ${password}
     Click on login to open the login link
     Enter your emailid and password in textbox  ${username}   ${password}
@@ -31,7 +32,7 @@ Validate Invalid Login
 
 Validate Successful Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+    [Tags]    REGRESSION
     [Arguments]    ${username}    ${password}
     Click on login to open the login link
     Enter your emailid and password in textbox  ${username}   ${password}
