@@ -9,4 +9,5 @@ Resource    ../../TestCases/Resources/seleniumEasy.robot
 
 *** Test Cases ***
 Validate SeleniumEasy Personal Details form with various data
+#    [Tags]    SMOKE
     Fill the form and Submit

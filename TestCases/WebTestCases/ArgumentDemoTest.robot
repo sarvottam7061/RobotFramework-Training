@@ -14,7 +14,7 @@ ${Error Login Message}    xpath://span[text()='Login was unsuccessful. Please co
 
 *** Test Cases ***
 Validate Successful Registration
-    [Tags]    sanity
+#    [Tags]    SMOKE
     [Documentation]    This Test is to Validate Successful Registration of the Webshop Portal
     Click on register to open the registration link
     Select the gender either amle or female
@@ -25,21 +25,21 @@ Validate Successful Registration
 
 Validate Successful Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+#    [Tags]   REGRESSION
     Click on login to open the login link
     Enter your emailid and password in textbox  ${Login Id}  ${Valid Password}
     Now click on LogIn button to login
     This will wait for successful login and close the browser    ${Success Login Message}  ${Pass expected}
 Failed Invalid Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+#    [Tags]   REGRESSION
     Click on login to open the login link
     Enter your emailid and password in textbox  ${Login Id}   ${Invalid Password}
     Now click on LogIn button to login
     This will wait for successful login and close the browser  ${Error Login Message}
 Validate Invalid Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]   smoke
+#    [Tags]   REGRESSION
     Click on login to open the login link
     Enter your emailid and password in textbox  ${Login Id}   ${Invalid Password}
     Now click on LogIn button to login

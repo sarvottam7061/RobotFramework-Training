@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    To validate Scenarios of the WebShop Shoppping Portal
 Library    SeleniumLibrary
-#Resource
+Resource    ../../TestCases/Resources/Resourse.robot
 
 *** Variables ***
 ${URL}  https://demowebshop.tricentis.com/
@@ -11,27 +11,25 @@ ${Exec Path}  ../../Drivers/chromedriver.exe
 Validate Successful Registration
     [Documentation]    This Test is to Validate Successful Registration of the Webshop Portal
 #    Set Selenium Speed    0.5 seconds
-    [Tags]    firsttest
-    Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
-    Maximize Browser Window
+    [Tags]    REGRESSION
+    Open the browser and navigate to webshop url
     Click Link  xpath://a[text()='Register']
     Select Radio Button  Gender  M
     Input Text     FirstName  Michael
     Input Text     id:LastName  Jackson
-    Input Text     id:Email  michaeljackson99@test.com
+    Input Text     id:Email  michaeljackson6899@test.com
     Input Password  id:Password  demo@testing
     Input Password  id:ConfirmPassword  demo@testing
     Click Button    id:register-button
     Wait Until Element Is Visible    //div[@class='page registration-result-page']
     Click Button    xpath://input[@class='button-1 register-continue-button' ]
-    Sleep    3 seconds
+#    Sleep    3 seconds
     Close Browser
 
 Validate Successful Login
     [Documentation]    This Test is to Validate Successful Login of the Webshop Portal
-    [Tags]    smoke
-    #    Set Selenium Speed    0.5 seconds
-    Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
+    [Tags]    SMOKE
+    Open the browser and navigate to webshop url
     Click Link   xpath://a[text()='Log in']
     Input Text    id:Email  michaeljackson8@test.com
     Input Password    id:Password  demo@testing
