@@ -9,8 +9,8 @@ ${Register Link}  xpath://a[text()='Register']
 ${Login Link}     xpath://a[text()='Log in']
 ${URL}  https://demowebshop.tricentis.com/
 ${Browser}  Chrome
-${Exec Path}    ../../Drivers/chromedriver.exe
-${Exec Path}    ../../Drivers/msedgedriver.exe
+#${Exec Path}    ../../Drivers/chromedriver.exe
+#${Exec Path}    ../../Drivers/msedgedriver.exe
 ${Email id}  michaeljackson9800@test.com
 ${Valid Password}  demo@testing
 ${Invalid Password}  demo#test
@@ -24,7 +24,8 @@ ${Error Login Message}    xpath://span[text()='Login was unsuccessful. Please co
 *** Keywords ***
 Open the browser and navigate to webshop url
 #    Set Selenium Speed    0.5 seconds
-    Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
+#    Open Browser    ${URL}  ${Browser}  executable_path=${Exec Path}
+    Open Browser    ${URL}  ${Browser}
     maximize browser window
 Close Browser session
     Close Browser

@@ -43,7 +43,7 @@ Select the gender either male or female
 Enter your firstname, lastname, emailid in textbox
     Input Text     id:FirstName  Michael
     Input Text     id:LastName  Jackson
-    Input Text     id:Email  michaeljackson749@test.com
+    Input Text     id:Email  michaeljackson65649@test.com
 Enter your password and confirm password
     Input Password  id:Password  demo@testing
     Input Password  id:ConfirmPassword  demo@testing
